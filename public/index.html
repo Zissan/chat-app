@@ -8,9 +8,18 @@
 
   <body>
     <h1>CHAT APP</h1>
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-      var socket = io();
-    </script>
+    <form action="pages/chat-box.html" method="GET">
+      <div>
+        <input type="text" name="txtUserName" id="txtUserName" />
+      </div>
+      <div>
+        <select name="ddlGroup" id="ddlGroup">
+          <option value="">--Groups--</option>
+          <option value="1">JavaScript</option>
+          <option value="2 ">C#</option>
+        </select>
+      </div>
+      <button type="submit">Connect</button>
+    </form>
   </body>
 </html>

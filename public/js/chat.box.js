@@ -12,6 +12,5 @@ socket.on("message", message => {
 
 fmChatBox.addEventListener("submit", event => {
   event.preventDefault();
-
-  console.log("message", txtChatBox.value);
+  socket.emit("chatMessage", txtChatBox.value);
 });

@@ -11,6 +11,9 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, "public")));
 io.on("connection", socket => {
   console.log("A USER IS CONNECTED");
+  socket.on("disconnect", function() {
+    console.log("USER DISCONNECTED");
+  });
 });
 
 server.listen(PORT, () => {
